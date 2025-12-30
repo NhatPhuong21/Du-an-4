@@ -15,6 +15,42 @@
             trong phần setting của project đó
             chọn phần collaborators, gửi lời mời user 2 vào project
             
+            bây giờ có 1 giờ án, bạn muốn có thể chỉnh sửa nó
+
+            b1: tạo 1 folder mới
+            b2: copy đường link của project code
+            
+            ở phần terminal: 
+                    b1: git init - tạo nơi lưu trữ git
+                    b2: git remote add origin đường_link
+                    b3: chuyển sang nhánh main
+                    b4: git pull origin main - kéo file project về
+
+            bây giờ: user 1 (chủ) và user có cùng 1 file project y như nhau
+
+                      user1 sửa đổi rồi push lên
+                      cùng lúc này, user2 cũng sửa code và push lên
+                          => ko thực hiện được lệnh này
+
+                              lúc này user2 muốn sửa thì phải tiếp tục pull phần code mà user1 vừa sửa về
+                              thì mới có thể sửa được, vì user1 là chủ project
+
+                                => xuất hiện 2 lệnh:
+
+                                        accept current changes: lưu phần user2 vừa sửa
+                                        accept incoming changes: lưu phần user1 sửa và push lên
+                                        
+                                        sau đó commit và push lên git
+
+
+                                giả sử:  bây giờ user2 sửa tiếp code và push lên git
+
+                                        user1 có thể sync thẳng phần user2 vừa chỉnh sửa lên file của mình
+                                        bằng thanh bên source control
+
+
+                                user chủ có quyền chủ động, có thể sync code user phụ bất cứ khi nào
+                                user phụ muốn sửa và push được lên git thì phải pull rồi mới commit và push được
     
     
     -->
